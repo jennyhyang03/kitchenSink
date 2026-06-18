@@ -1,0 +1,56 @@
+FRIDGE EVALUATION RESULTS
+=========================
+
+fridge_0
+Ground Truth: ['apple juice', 'fruit punch juice', 'lemon', 'water bottle', 'apple', 'carrot', 'bell pepper', 'tomato', 'cucumber', 'parsley', 'cheddar cheese', 'hotdog', 'hummus', 'egg', 'milk', 'meat']
+Prediction  : ['eggs', 'strawberries', 'grapes', 'tomatoes', 'bell peppers', 'apples', 'lemons', 'lettuce', 'cucumbers', 'carrots', 'oranges', 'watermelon', 'liquid yogurt', 'milk', 'bottled water', 'orange juice', 'soft drink', 'jam', 'dessert cups', 'cake', 'meat']
+Jaccard     : 0.276
+LLM Score   : 0.600
+
+----------------------
+
+fridge_1
+Ground Truth: ['water jug', 'fruit infused water', 'cucumber infused water', 'milk', 'strawberry', 'yogurt', 'bell pepper', 'corn', 'chicken', 'lettuce', 'red onion', 'tortilla', 'beef', 'salmon', 'pineapple', 'watermelon', 'sweet potato', 'broccoli', 'orange juice', 'wine', 'pickle', 'radish', 'pepper', 'carrot', 'egg', 'cucumber', 'zucchini', 'lemon', 'lime', 'apple', 'orange']
+Prediction  : ['cucumber', 'strawberries', 'milk', 'orange juice', 'wine', 'parsley', 'pickles', 'radishes', 'corn', 'bell peppers', 'red onion', 'pasta', 'blueberries', 'green onions', 'pineapple', 'melon', 'broccoli', 'salmon', 'mixed vegetables', 'carrots', 'eggs', 'lemons', 'limes', 'oranges', 'apples', 'lettuce']
+Jaccard     : 0.462
+LLM Score   : 0.700
+
+----------------------
+
+fridge_2
+Ground Truth: ['roasted vegetables', 'queso', 'noodles', 'tzatziki', 'pickle', 'rice', 'guacamole', 'olive', 'deli meat', 'grape', 'applesauce', 'mango', 'raspberry', 'blueberry', 'egg', 'spinach', 'mushroom', 'edamame', 'broccoli', 'avocado', 'apple', 'orange', 'lemon', 'green pepper', 'carrot', 'arugula']
+Prediction  : ['mixed vegetable stir fry', 'queso dip', 'noodles', 'tzatziki', 'hummus', 'salad', 'raspberries', 'apple juice', 'grapes', 'olives', 'pickles', 'guacamole', 'eggs', 'peaches', 'spinach', 'mushrooms', 'broccoli', 'mixed frozen vegetables', 'cooked vegetables', 'cooked meat', 'sliced cheese', 'carrots', 'zucchini', 'lettuce']
+Jaccard     : 0.282
+LLM Score   : 0.520
+
+----------------------
+
+fridge_3
+Ground Truth: ['apple', 'carrot', 'grape', 'strawberry', 'blueberry', 'raspberry', 'orange', 'lemon', 'lime', 'scallion', 'broccoli', 'tomato', 'bok choy', 'cucumber', 'bread', 'spinach', 'kale', 'lemonade', 'milk', 'salad dressing']
+Prediction  : ['oranges', 'lemons', 'limes', 'strawberries', 'grapes', 'apples', 'mangoes', 'leafy greens', 'broccoli', 'carrots', 'celery', 'cucumbers', 'bagels', 'sliced bread', 'buns', 'cheese', 'bottled juice', 'mayonnaise', 'hummus']
+Jaccard     : 0.258
+LLM Score   : 0.550
+
+----------------------
+
+fridge_4
+Ground Truth: ['chicken nugget', 'burger', 'pepperoni pizza', 'fried chicken', 'waffle', 'crab', 'french fry', 'popsicle', 'hot pocket', 'egg', 'bbq sauce', 'apple juice', 'ketchup', 'soda (mountain dew)', 'soda (canada dry)', 'root beer', 'butter', 'tomato', 'bread', 'fruit juice']
+Prediction  : ['chicken nuggets', 'frozen pizza', 'french fries', 'frozen meals', 'frozen pastries', 'bread rolls', 'eggs', 'tomatoes', 'hamburger buns', 'sliced bread', 'butter', 'cheese', 'milk', 'yogurt', 'whipped cream', 'soft drinks', 'root beer', 'energy drinks', 'bottled water', 'ketchup', 'mustard', 'mayonnaise', 'salad dressing', 'barbecue sauce', 'syrup', 'chocolate milk', 'pudding', 'snack cakes', 'chocolate bars', 'candy', 'instant noodles', 'ice pops']
+Jaccard     : 0.106
+LLM Score   : 0.550
+
+----------------------
+
+fridge_5
+Ground Truth: ['egg', 'sparkling water', 'chicken skewer', 'jerky', 'hummus', 'apple', 'egg white', 'greek yogurt', 'edamame', 'avocado', 'lemon', 'kiwi', 'green juice', 'bread', 'heavy cream', 'almond butter', 'blueberry jam', 'cherry tomato', 'lime']
+Prediction  : ['green juice', 'sparkling water', 'lemons', 'avocados', 'grapes', 'strawberries', 'edamame', 'jerky', 'chicken breast', 'hard boiled eggs', 'raw eggs', 'egg whites', 'hummus', 'apples', 'leafy greens', 'greek yogurt', 'tortillas', 'bread', 'cheese', 'cherry tomatoes', 'pickles', 'almond butter', 'peanut butter']
+Jaccard     : 0.400
+LLM Score   : 0.700
+
+----------------------
+
+
+====================
+AVG JACCARD: 0.297
+AVG LLM    : 0.603
+====================

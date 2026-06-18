@@ -1,0 +1,67 @@
+    
+    # INFORMATION YOU HAVE ACCESS TO: 
+    AVAILABLE INGREDIENTS: {ingredients}
+    DIETARY RESTRICTIONS: {dietary_restrictions}
+    ALLERGIES: {allergies}
+    USER_SKILL: {user_skill}
+    MEAL TYPE: {meal_type}
+    Here are the candidate recipes with their index: {candidates}
+
+
+    #INSTRUCTIONS
+    Your task has two steps: 
+
+    STEP 1: Evaluate each recipe
+    For each candidate recipe, determine:
+    - Difficulty (easy, medium, hard) based on the instructions in relation to the user's skill level (what is easy for an advanced user may be hard for a beginner)
+    - Provide reasoning for the difficulty (`difficulty_reasoning`)
+    - Estimated cooking time in minutes based on the recipe instructions 
+    - Whether it fits the requested meal type
+    - Must strictly respect all dietary restrictions and allergies (if it does not, it must NOT be selected)
+    - Identify missing ingredients (ingredients required by the recipe, but not in the user's available ingredients)
+    - For any missing ingredient, if there is a reasonable subsitution availble in the user's ingredients, provide it a new field `substitutions` as a mapping from missing ingredient -> substitute
+
+    STEP 2: Select the BEST 3 recipes
+    - Uses the most available ingredients (higher match score)
+    - Fully respects dietary restrictions and allergies (REQUIRED)
+    - Matches the requested meal type
+    - Provides variety (avoid selecting very similar recipes)
+    - If fewer than 3 recipes fully meet all constraints, select the closest valid options while still prioritizing safety (especially allergies)
+
+    # Output Format
+Return EXACTLY 3 RECIPES in this format:
+
+{{
+"recipes": [
+    {{
+        "index": 0,
+        "difficulty": "Easy",
+        "difficulty_reasoning": "Uses only simple chopping and boiling, matches user's beginner skill",
+        "estimated_time": 25,
+        "substitutions": {{"butter": "olive oil", "milk": "almond milk"}}
+    }},
+    {{
+        "index": 3,
+        "difficulty": "Medium",
+        "difficulty_reasoning": "Requires multiple cooking techniques like roasting and sautéing, intermediate skill",
+        "estimated_time": 40,
+        "substitutions": {{}}
+    }},
+    {{
+        "index": 7,
+        "difficulty": "Hard",
+        "difficulty_reasoning": "Involves complex steps like making sauces from scratch and timing multiple components, advanced skill",
+        "estimated_time": 60,
+        "substitutions": {{"sour cream": "greek yogurt"}}
+    }}
+    ]
+}}
+    
+    Notes:
+    - Only include subsitutions if they are reasonable and palatable.
+    - Use ingredients the user already has.
+    - If no subsitution is availble for a missing ingredient, return an empty object for `subsitutions`
+    - `difficulty_reasoning` should explain why this recipe matches the selected difficulty level for the user.
+    - Do not invent new recipes.
+    - Only select from the candidates provided.
+    
